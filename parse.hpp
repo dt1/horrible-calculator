@@ -1,10 +1,3 @@
-//
-//  parse.hpp
-//  calc
-//
-//  Created by db on 9/19/20.
-//
-
 #pragma once
 
 #ifndef parse_hpp

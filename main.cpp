@@ -1,26 +1,27 @@
-//
-//  main.cpp
-//  calc
-//
-//  Created by db on 9/19/20.
-//
-
 #include "parse.hpp"
 #include <iostream>
 
-int main() {
+int game_loop() {
+    bool tf = true;
     prs::mStr s;
     std::string i;
-
+    
     std::cout << "welcome to horrible calculator\n";
-    std::getline(std::cin, i);
+    while (tf) {
+        std::cout << "enter an expression or press 'e' to exit.\n";
+        std::cout << ">> " ;
+        std::getline(std::cin, i);
+        if (i == "e") {
+            return NULL;
+        }
+        s.setStr(&i[0]);
+        s.calc();
+    }
+    return  NULL;
+}
 
-    s.setStr(&i[0]);
-    s.calc();
-
-    main();
-
-//    int z = 5 / 6;
-//    std::cout << z << "\n";
-//    return 0;
+int main() {
+    game_loop();
+    std::cout << "thanks for playing!\n";
+    return 0;
 }

@@ -1,4 +1,4 @@
-# Horrible calculator
+# horrible calculator
 
 This is something I'm using to learn C++.
 
@@ -6,29 +6,33 @@ To run, compile using your favorite tool. The command output will look like:
 
 ```bash
 welcome to horrible calculator
+enter an expression or press 'e' to exit.
+>>
 ```
 
-The operations that work are: +, -, *, /. At the moment, this is limited to two integers at this time.
+The available operations are: `+, -, *, /` and this only works with integers.
 
 An example:
 
 ```bash
 welcome to horrible calculator
-4+4
-found + at 1
-4
-4
-calc = 8
+enter an expression or press 'e' to exit.
+>> 33-3
+found - at 2
+33
+3
+calc = 30
+enter an expression or press 'e' to exit.
+>>
 ```
 
 It's very easy to break:
 
 ```bash
-welcome to horrible calculator
-ccc
+enter an expression or press 'e' to exit.
+>> cc
 no operators found
-ccc
-libc++abi.dylib: terminating with uncaught exception of type std::invalid_argument: stoi: no conversion
+(and more errors)
 ```
 
-This will be updated further, but you wouldn't want to use this to calculate your taxes.
+You probably don't want to do your taxes with this program.
